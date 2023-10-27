@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+}
+
+#site-container {
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-container {
+    flex: 1;
+}
+
+.middle-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom-container {
+    flex: 1;
+}
