@@ -1,13 +1,13 @@
 export class Data {
-    static async apiRequest(location) {
+    static async weatherApiRequest(location) {
         const apiKey = "0d93acb2b01144a2971185324231710"
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`);
         const data = await response.json();
         return data;
     }
 
-    static async getData(location) {
-        const response = await this.apiRequest(location);
+    static async getWeatherData(location) {
+        const response = await this.weatherApiRequest(location);
         const data = {
             location: {
                 country: response.location.country,
