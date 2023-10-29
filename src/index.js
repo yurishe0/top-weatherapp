@@ -5,14 +5,21 @@ const input = document.querySelector("#location");
 const button = document.querySelector("button");
 
 // data containers
-const weatherInfoMain = document.querySelector("#weather-info__main");
-const headerContainer = document.querySelector("#header-container");
-const timeContainer = document.querySelector("#time-container");
-const weatherInfoOther = document.querySelector("#weather-info__other");
-const forecastContainer = document.querySelector("#forecast-container");
-const creditsContainer = document.querySelector("#credits-container");
+export const DOMelements = {
+    city: document.querySelector("h1"),
+    country: document.querySelector("h2"),
+    weatherIcon: document.querySelector(".weather-icon"),
+    weatherName: document.querySelector('#weather-name'),
+    temperature: document.querySelector('#temperature'),
+    feelsLike: document.querySelector('#feelslike'),
+    precip: document.querySelector('#precip'),
+    wind: document.querySelector('#wind'),
+    humidity: document.querySelector('#humidity'),
+    time: document.querySelector('#time'),
+}
 
 button.addEventListener("click", async () => {
     const data = await Data.getWeatherData(input.value);
     UI.updateBackground("sunny");
+    UI.showData(data);
 })

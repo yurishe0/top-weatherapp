@@ -8,6 +8,7 @@ export class Data {
 
     static async getWeatherData(location) {
         const response = await this.weatherApiRequest(location);
+        console.log(response);
         const data = {
             location: {
                 country: response.location.country,
@@ -23,6 +24,8 @@ export class Data {
                 precipMm: response.current.precip_mm,
                 windKph: response.current.wind_kph,
                 windMph: response.current.wind_mph,
+                condition: response.current.condition.text,
+                weatherIcon: response.current.condition.icon
             },
             isDay: response.current.is_day,
             lastUpdated: response.current.last_updated,
