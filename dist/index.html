@@ -1,25 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/data-input.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/weatherinfo.css">
     <script src="main.js" defer></script>
 </head>
 <body>
     <div id="site-container">
-        <div class="top-container">
-            a
+
+        <div id="weather-info__main">
+            <div class="general">
+                <div class="weather-icon"></div>
+                <div class="weather-name-container">
+                    <span id="weather-name"></span>
+                </div>
+            </div>
+            <div class="temp-and-precip">
+                <div id="temperature-container">
+                    <span id="temperature"></span>
+                    <span id="feelslike"></span>
+                </div>
+                <div id="precip-container">
+                    <span id="precip"></span>
+                </div>
+            </div>
         </div>
-        <div class="middle-container">
+
+        <div id="header-container">
+            <h1>Enter a location</h1>
+            <h2></h2>
+        </div>
+
+        <div id="time-container">
+            <span id="time"></span>
+        </div>
+
+        <div id="middle-container">
             <input type="text" id="location">
             <button type="submit">OK</button>
         </div>
-        <div class="bottom-container">
-            a
+
+        <div id="weather-info__other">
+            <div class="wind-container">
+                <span id="wind"></span>
+                <span id="humidity"></span>
+            </div>
         </div>
+
+        <div id="forecast-container"></div>
+
+        <div id="credits-container"></div>
     </div>
 </body>
 </html>
