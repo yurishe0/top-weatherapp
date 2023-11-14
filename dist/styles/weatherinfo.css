@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Digital;
+    src: url('/dist/fonts/digital-7.regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('/dist/fonts/Roboto-Regular.ttf');
+}
+
+.general {
+
+}
+
+.weather-icon {
+
+}
+
+#weather-name {
+
+}
+
+/* */
+
+.temp-and-precip {
+
+}
+
+.temperature-container {
+
+}
+
+#temperature {
+
+}
+
+#feelslike {
+
+}
+
+.precip-container {
+
+}
+
+#precip {
+
+}
+
+/* */
+
+#header-container {
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 0px;
+    font-family: Roboto;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* */
+
+#time-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#time {
+    font-family: Digital;
+    font-size: 128px;
+    margin-right: 20px;
+}
+
+/* */
+
+#weather-info__other {
+
+}
+
+.wind-container {
+
+}
+
+#wind {
+
+}
+
+#humidity {
+
+}
+
+/* */
+
+#forecast-container {
+
+}
+
+/* */
+
+#credits-container {
+
+}
