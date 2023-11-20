@@ -15,12 +15,44 @@ export class UI {
     static showData(data) {
         DOMelements.city.textContent = data.location.city;
         DOMelements.country.textContent = data.location.country;
-        DOMelements.weatherIcon.style.backgroundImage = `url('${data.weather.weatherIcon}')`;
         DOMelements.weatherName.textContent = data.weather.condition;
         DOMelements.temperature.textContent = data.weather.temperatureC;
         DOMelements.feelsLike.textContent = data.weather.feelsLikeC;
         DOMelements.precip.textContent = data.weather.precipMm;
+        DOMelements.wind.textContent = data.weather.windKph
         DOMelements.humidity.textContent = data.weather.humidity;
         DOMelements.time.textContent = data.localTime;
+        console.log(data.weather.condition, data.localTime);
+
+        this.generateIcons(data.weather.condition, data.isDay);
+    }
+
+    static generateIcons(condition, isDay) {
+        let conditionName;
+        // add new conditions when spotted
+        switch(condition) {
+            case "Clear":
+                conditionName = (isDay) ? "clear_day" : "clear_night";
+            case "Sunny":
+                conditionName = "clear_day";
+                break;
+            case "Light rain":
+            case "Rain":
+            case "Patchy rain possible":
+                conditionName = "rainy";
+                break;
+            case "Cloudy":
+            case "Partly cloudy":
+                conditionName = (isDay) ? "partly_cloudy_day" : "partly_cloudy_night";
+                break;
+            case "Overcast":
+                conditionName = "cloud";
+                break;
+        }
+        DOMelements.generalIcon.innerText = conditionName;
+        DOMelements.temperatureIcon.innerText = "thermostat";
+        DOMelements.precipIcon.innerText = "humidity_percentage";
+        DOMelements.windIcon.innerText = "air";
+        DOMelements.humidityIcon.innerText = "humidity_mid";
     }
 }
