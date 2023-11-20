@@ -29,7 +29,7 @@ export class Data {
             },
             isDay: response.current.is_day,
             lastUpdated: response.current.last_updated,
-            localTime: response.location.localtime,
+            localTime: response.location.localtime.slice(11),
         }
         return data;
     }
