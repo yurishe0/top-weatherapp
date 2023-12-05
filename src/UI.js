@@ -1,7 +1,29 @@
 import { DOMelements } from "./index.js";
 
 export class UI {
-    static updateBackground(theme) {
+    static updateBackground(condition, isDay) {
+        let theme;
+        if(!isDay) {
+            theme = "night"
+        } else {
+            switch(condition) {
+                case "Clear":
+                case "Sunny":
+                    theme = "sunny";
+                    break;
+                case "Light rain":
+                case "Rain":
+                case "Patchy rain possible":
+                    theme = "rain";
+                    break;
+                case "Cloudy":
+                case "Partly cloudy":
+                case "Overcast":
+                    theme = "cloudy";
+                    break;
+            }
+        }
+
         const siteContainer = document.querySelector("#site-container");
         const index = Math.floor(Math.random() * 5);
 
@@ -22,7 +44,6 @@ export class UI {
         DOMelements.wind.textContent = data.weather.windKph
         DOMelements.humidity.textContent = data.weather.humidity;
         DOMelements.time.textContent = data.localTime;
-        console.log(data.weather.condition, data.localTime);
 
         this.generateIcons(data.weather.condition, data.isDay);
     }

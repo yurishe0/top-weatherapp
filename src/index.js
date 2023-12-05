@@ -24,7 +24,7 @@ export const DOMelements = {
 
 button.addEventListener("click", async () => {
     const data = await Data.getWeatherData(input.value);
-    UI.updateBackground("sunny");
+    UI.updateBackground(data.weather.condition, data.isDay);
     setTimeout(() => {
         UI.showData(data);
     }, 500);
