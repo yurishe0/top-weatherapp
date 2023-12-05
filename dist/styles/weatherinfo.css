@@ -8,8 +8,18 @@
     src: url('/dist/fonts/Roboto-Regular.ttf');
 }
 
-.general {
+.material-symbols-outlined {
+    font-size: 48px;
+}
 
+#weather-info__main {
+    font-size: 28px;
+}
+
+.general {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .weather-icon {
@@ -23,11 +33,11 @@
 /* */
 
 .temp-and-precip {
-
 }
 
-.temperature-container {
-
+#temperature-container {
+    display: flex;
+    align-items: center;
 }
 
 #temperature {
@@ -38,8 +48,9 @@
 
 }
 
-.precip-container {
-
+#precip-container {
+    display: flex;
+    align-items: center;
 }
 
 #precip {
