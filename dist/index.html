@@ -15,21 +15,34 @@
     <div id="site-container">
 
         <div id="weather-info__main">
-            <div class="general">
-                <span class="material-symbols-outlined" id="general-icon"></span>
-                <div class="weather-name-container">
-                    <span id="weather-name"></span>
-                </div>
+            <div class="icon-text">
+                <!-- <span class="material-symbols-outlined" id="general-icon"></span> -->
+                <span id="weather-name"></span>
             </div>
             <div class="temp-and-precip">
                 <div id="temperature-container">
-                    <span class="material-symbols-outlined" id="temperature-icon"></span>
-                    <span id="temperature"></span>
-                    <span id="feelslike"></span>
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" id="temperature-icon"></span>
+                        <span id="temperature"></span>
+                    </div>
                 </div>
                 <div id="precip-container">
-                    <span class="material-symbols-outlined" id="precip-icon"></span>
-                    <span id="precip"></span>
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" id="precip-icon"></span>
+                        <span id="precip"></span>
+                    </div>
+                </div>
+                <div id="wind-container">
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" id="wind-icon"></span>
+                        <span id="wind"></span>
+                    </div>
+                </div>
+                <div id="humidity-container">
+                    <div class="icon-text">
+                        <span class="material-symbols-outlined" id="humidity-icon"></span>
+                        <span id="humidity"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,12 +62,7 @@
         </div>
 
         <div id="weather-info__other">
-            <div class="wind-container">
-                <span class="material-symbols-outlined" id="wind-icon"></span>
-                <span id="wind"></span>
-                <span class="material-symbols-outlined" id="humidity-icon"></span>
-                <span id="humidity"></span>
-            </div>
+
         </div>
 
         <div id="forecast-container"></div>
