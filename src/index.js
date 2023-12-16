@@ -12,7 +12,6 @@ export const DOMelements = {
     weatherName: document.querySelector('#weather-name'),
     temperature: document.querySelector('#temperature'),
     temperatureIcon: document.querySelector('#temperature-icon'),
-    feelsLike: document.querySelector('#feelslike'),
     precip: document.querySelector('#precip'),
     precipIcon: document.querySelector('#precip-icon'),
     wind: document.querySelector('#wind'),

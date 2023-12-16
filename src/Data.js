@@ -17,7 +17,6 @@ export class Data {
             weather: {
                 temperatureC: response.current.temp_c,
                 temperatureF: response.current.temp_f,
-                feelsLikeC: response.current.feelslike_c,
                 feelsLikeF: response.current.feelslike_f,
                 humidity: response.current.humidity,
                 precipIn: response.current.precip_in,

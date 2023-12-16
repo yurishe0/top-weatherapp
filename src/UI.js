@@ -37,12 +37,11 @@ export class UI {
     static showData(data) {
         DOMelements.city.textContent = data.location.city;
         DOMelements.country.textContent = data.location.country;
-        DOMelements.weatherName.textContent = data.weather.condition;
-        DOMelements.temperature.textContent = data.weather.temperatureC;
-        DOMelements.feelsLike.textContent = data.weather.feelsLikeC;
-        DOMelements.precip.textContent = data.weather.precipMm;
-        DOMelements.wind.textContent = data.weather.windKph
-        DOMelements.humidity.textContent = data.weather.humidity;
+        DOMelements.weatherName.textContent = data.weather.condition.toUpperCase();
+        DOMelements.temperature.textContent = `${data.weather.temperatureC}°C`;
+        DOMelements.precip.textContent = `${data.weather.precipMm} mm`;
+        DOMelements.wind.textContent = `${data.weather.windKph} km/h`;
+        DOMelements.humidity.textContent = `${data.weather.humidity}%`;
         DOMelements.time.textContent = data.localTime;
 
         this.generateIcons(data.weather.condition, data.isDay);
@@ -70,7 +69,6 @@ export class UI {
                 conditionName = "cloud";
                 break;
         }
-        DOMelements.generalIcon.innerText = conditionName;
         DOMelements.temperatureIcon.innerText = "thermostat";
         DOMelements.precipIcon.innerText = "humidity_percentage";
         DOMelements.windIcon.innerText = "air";
