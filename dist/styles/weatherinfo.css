@@ -8,12 +8,45 @@
     src: url('/dist/fonts/Roboto-Regular.ttf');
 }
 
+@font-face {
+    font-family: Monsterrat;
+    src: url('/dist/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .material-symbols-outlined {
     font-size: 48px;
 }
 
+#temperature-icon {
+    color: rgb(255, 211, 181);
+}
+
+#precip-icon {
+    color: rgb(133, 133, 250);
+}
+
+#wind-icon {
+    color: rgb(255, 255, 255);
+}
+
+#humidity-icon {
+    color: rgb(73, 114, 165);
+}
+
 #weather-info__main {
-    font-size: 28px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-family: Monsterrat;
+    padding: 8px;
 }
 
 .general {
@@ -27,30 +60,25 @@
 }
 
 #weather-name {
-
+    font-size: 36px;
+    font-weight: bold;
 }
 
 /* */
 
 .temp-and-precip {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #temperature-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 #temperature {
 
-}
-
-#feelslike {
-
-}
-
-#precip-container {
-    display: flex;
-    align-items: center;
 }
 
 #precip {
@@ -92,10 +120,21 @@ h2 {
 /* */
 
 #weather-info__other {
+    font-family: Monsterrat;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 24px;
+    padding: 8px;
 }
 
 .wind-container {
+
+}
+
+.humidity-container {
 
 }
 
